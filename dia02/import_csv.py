@@ -90,3 +90,17 @@ df_customers[colunas]
 df_customers = df_customers[colunas]
 df_customers
 # %%
+
+#renomeando colunas
+#cria um dataframe novo sem alterar o anterior
+df_customers.rename(columns={
+    'Name': 'Nome',
+    'Points': 'Pontos'
+})
+df_customers
+# %%
+
+#Renomeando a coluna no próprio dataframe, sem precisar reatribuir
+df_customers.rename(columns={'UUID': 'ID'}, inplace = True)
+df_customers
+# %%
